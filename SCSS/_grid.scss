@@ -1,0 +1,27 @@
+.priceGrid {
+	display: grid;
+	grid-template-areas:
+		'join join'
+		'monthly why';
+	width: 715px;
+
+	.join {
+		grid-area: join;
+	}
+
+	.monthly {
+		grid-area: monthly;
+	}
+
+	.why {
+		grid-area: why;
+	}
+
+	@media (max-width: 750px) {
+		grid-template-areas:
+			'join'
+			'monthly'
+			'why';
+		width: 400px;
+	}
+}
