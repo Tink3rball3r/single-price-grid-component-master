@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+	--cyan: hsl(179, 62%, 43%);
+	--yellow: hsl(71, 73%, 54%);
+	--gray: hsl(204, 43%, 93%);
+	--blue: hsl(218, 22%, 67%);
+	--white: hsl(0, 0%, 100%);
+	--cyan-lt: hsl(179, 67%, 46%);
+}
+
+/* resets */
+html {
+	font-family: 'Karla', sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: var(--white);
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* helpers */
+.white-bg {
+	background-color: var(--white);
+}
+
+.cyan-bg {
+	background-color: var(--cyan);
+}
+
+.cyan-lt-bg {
+	background-color: var(--cyan-lt);
+}
+
+.yellow-bg {
+	background-color: var(--yellow);
+}
+
+.cyan-font {
+	color: var(--cyan);
+}
+
+.yellow-font {
+	color: var(--yellow);
+}
+
+.white-font {
+	color: var(--white);
+}
+
+.blue-font {
+	color: var(--blue);
+}
+
+/* mobile styles */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--gray);
+	min-height: 100vh;
+}
+
+main {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+}
+.join,
+.monthly,
+.why {
+	padding: 1.8rem 2rem;
+	/* border-radius:  start here, my man! */
+}
+.join h1,
+.join h2,
+.monthly h2,
+.why h2 {
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+/* Join card */
+
+.join {
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+.join h1 {
+	padding: 0 0 1.5rem 0;
+}
+
+.join h2 {
+	padding: 0 0 1rem 0;
+}
+
+.join p {
+	line-height: 1.5;
+}
+
+/* monthly card */
+.monthly h2 {
+	padding: 0 0 1.5rem 0;
+}
+.monthly .price {
+	display: flex;
+	align-items: center;
+	padding: 0 0 1rem 0;
+}
+
+.monthly span {
+	padding: 0 0 0 1rem;
+	font-weight: 400;
+	font-size: 1rem;
+	color: var(--gray);
+}
+
+.monthly h3 {
+	font-size: 2rem;
+}
+
+.monthly p {
+	padding: 0 0 3rem 0;
+}
+.cta {
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 700;
+	padding: 1rem 0;
+	border-radius: 0.3rem;
+	box-shadow: 7px 7px 76px -1px rgba(0, 0, 0, 0.12);
+}
+
+/* why card */
+
+.why {
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.why h2 {
+	padding: 0 0 1.5rem 0;
+}
+.why li {
+	font-weight: 400;
+	padding: 0.2rem 0;
+}
+
+/* desktop styles */
+@media only screen and (min-width: 50rem) {
+	main {
+		max-width: 45rem;
+		flex-direction: row;
+		flex-wrap: wrap;
+		height: 500px;
+	}
+
+	.join {
+		width: 100%;
+	}
+
+	.monthly {
+		width: 50%;
+		border-radius: 0 0 0 0.5rem;
+	}
+
+	.why {
+		border-radius: 0 0 0.5rem 0;
+		width: 50%;
+	}
+}
